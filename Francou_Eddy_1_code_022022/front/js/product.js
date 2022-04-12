@@ -70,7 +70,7 @@ const button = document.getElementById("addToCart")
 
         // si les champs sont vides
         if(parseInt(quantity.value) === 0 || color.value ===""){
-            return alert("Veuillez compléter chaque champ correctement s'il vous plaît ");
+            return alert("Veuillez compléter chaque champ correctement, s'il vous plaît");
             
         } else  if (parseInt(quantity.value) >100){
             return alert("Choisissez une quantité entre 1 et 100");
