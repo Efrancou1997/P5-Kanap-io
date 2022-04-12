@@ -130,7 +130,7 @@ const form = document.querySelector(".cart__order__form");
 
 // Création des RegExp
 let namesRegExp = new RegExp("^[a-zA-Zàâäéèêëïîôöùûüç' -]{2,}$");
-let addressRegExp = new RegExp("^[0-9]{1,4}[a-zA-Z0-9àâäéèêëïîôöùûüç '.,-]{3,}$");
+let addressRegExp = new RegExp("[a-zA-z0-9/\\''(),-\s]{2,255}$");
 let cityRegExp = new RegExp("^[a-zA-Z0-9àâäéèêëïîôöùûüç' -]{3,60}$");
 let emailRegExp = new RegExp("^[a-zA-Z0-9àâäéèêëïîôöùûüç.-_]+[@]{1}[a-zA-Z0-9.-_]+[.][a-z]{2,10}$");
 
