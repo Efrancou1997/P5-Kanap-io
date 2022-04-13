@@ -305,8 +305,7 @@ btnForm.addEventListener("click", (validEvent) => {
             .then((data)=> {
                 console.log(data)
                 console.log(data.orderId);
-                localStorage.setItem("orderId", data.orderId);
-                window.location.href = "confirmation.html";
+                window.location.href = `confirmation.html?id=${data.orderId}`;
             })
             .catch((error)=>{
                 console.error('Error du server: le problème sera réglé ultérieurement', error);
@@ -340,4 +339,3 @@ fillUpForm("address");
 fillUpForm("city");
 fillUpForm("email");
 //----------------Informations Formulaire statiques ------FIN ------------------------------------
-
