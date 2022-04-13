@@ -1,4 +1,4 @@
-/: Récupérer que l'id du produit sélectionné
+// Récupérer que l'id du produit sélectionné
 const product_url = window.location.search;
 const urlSearchParams = new URLSearchParams(product_url);
 const _id = urlSearchParams.get("id");
