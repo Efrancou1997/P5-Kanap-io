@@ -20,4 +20,3 @@ fetch('http://localhost:3000/api/products')
     .catch((error) => {
         console.error('Error du server: le problème sera réglé ultérieurement', error);
     });
-
