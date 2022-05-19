@@ -24,7 +24,7 @@ if(orderLocalStorage == undefined || orderLocalStorage == 0){
         <div> Oups... Votre panier est vide </div>
     </div>`;
 
-    positionCartProduct.innerHTML = emptyBasket;
+    positionCartProduct.innerText = emptyBasket;
 
 }else{
     // Si le panier n'est pas vide : afficher les produits dans le localStorage
@@ -65,12 +65,12 @@ if(orderLocalStorage == undefined || orderLocalStorage == 0){
 
                 //--------------------Calcul quantité d'articles dans le panier            
                 calculTotalQuantity.push( parseInt(`${elt.quantityProduct}`));
-                totalQuantity.innerHTML = calculTotalQuantity.reduce(reducer,0);                
+                totalQuantity.innerText = calculTotalQuantity.reduce(reducer,0);                
                
 
                 // -------------------Montant total du panier ---------------------------------------------------                          
                 calculTotalPrice.push( parseInt(`${elt.quantityProduct}`) * parseInt(`${elements.price}`));
-                totalPrice.innerHTML = calculTotalPrice.reduce(reducer,0);                              
+                totalPrice.innerText = calculTotalPrice.reduce(reducer,0);                              
 
 
                 // -------------Supprimer un article du panier ET du localStorage---------------------------
