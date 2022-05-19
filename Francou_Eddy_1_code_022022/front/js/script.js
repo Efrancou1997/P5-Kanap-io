@@ -9,7 +9,7 @@ fetch('http://localhost:3000/api/products')
             items.innerHTML += 
             `<a href ="./product.html?id=${element._id}"> 
                 <article>
-                    <img src=${element.imageUrl} ${element.altTxt}> 
+                    <img src="${element.imageUrl}" alt="${element.altTxt}"> 
                     <h3> ${element.name}</h3> 
                     <p> ${element.description} </p> 
                 </article> 
