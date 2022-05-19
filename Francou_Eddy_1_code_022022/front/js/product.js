@@ -13,16 +13,16 @@ fetch( `http://localhost:3000/api/products/${_id}`)
     .then((element) => {
 
         //Titre de la page produit
-        document.querySelector("title").innerHTML = `${element.name}`;
+        document.querySelector("title").innerText = `${element.name}`;
 
         //Nom du produit
-        document.getElementById('title').innerHTML = `${element.name}`;
+        document.getElementById('title').innerText = `${element.name}`;
 
         //Description du produit
-        document.getElementById('description').innerHTML = `${element.description}`;
+        document.getElementById('description').innerText = `${element.description}`;
 
         //Prix du produit
-        document.getElementById('price').innerHTML =`${element.price}`;
+        document.getElementById('price').innerText =`${element.price}`;
 
         //Image du produit
         document
@@ -35,7 +35,7 @@ fetch( `http://localhost:3000/api/products/${_id}`)
         element.colors.forEach((color) => {
             let theOption = document.createElement('option');
             theOption.value = color;
-            theOption.innerHTML = `${color}`;
+            theOption.innerText = `${color}`;
             select.appendChild(theOption);
         });
 
@@ -69,7 +69,7 @@ const button = document.getElementById("addToCart")
         
 
         // si les champs sont vides
-        if(parseInt(quantity.value) === 0 || color.value ===""){
+        if(parseInt(quantity.value) <= 0 || color.value ===""){
             return alert("Veuillez compléter chaque champ correctement, s'il vous plaît");
             
         } else  if (parseInt(quantity.value) >100){
